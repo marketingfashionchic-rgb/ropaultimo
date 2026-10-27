@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CONTACTANOS</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial , sans-serif;
+    margin: 0;
+    background: #f1bbf2;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.producto {
+    background: white;
+    padding: 30px;
+    border-radius:24px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto button,
+#comprar {
+    border: none;
+    background: #198754;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.producto button:hover,
+#comprar:hover {
+    opacity: 0.85;
+}
+
+.carrito {
+    background: white;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.controles button {
+    margin: 3px;
+    cursor: pointer;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#comprar {
+    width: 100%;
+    font-size: 17px;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="productos">
+
+    <div class="producto">
+        <img src="canguro verde.jpg" alt="canguro verde">
+        <h3>Talla M</h3>
+        <p>190 Bs</p>
+        <button onclick="agregar('Talla M',190)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="blusa amarilla.jpg" alt="blusa amarilla">
+        <h3>Talla M</h3>
+        <p>235 Bs</p>
+        <button onclick="agregar(Talla M',235)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="camisa dorada.jpg" alt="camisa dorada">
+        <h3>Talla S</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Talla L',250)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="camisa verde.jpg" alt="camisa verde">
+        <h3>Talla S</h3>
+        <p>225 Bs</p>
+        <button onclick="agregar('Talla S',225)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="Blusa elegante.jpg" alt="Blusa elegante">
+        <h3>Talla S</h3>
+        <p>235 Bs</p>
+        <button onclick="agregar('Blusa elegante S',235)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="camsisa crema.jpg" alt="camisa crema">
+        <h3>Talla L</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Talla L',250)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="camisa negra.jpg" alt="camisa negra">
+        <h3>Talla L</h3>
+        <p>245 Bs</p>
+        <button onclick="agregar('Talla L',245)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="blusita amarilla.jpg" alt="blusita amarillo">
+        <h3>Talla S</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Talla S',250)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="camisa elegante.jpg" alt="camisa elegante">
+        <h3>Talla M</h3>
+        <p>280 Bs</p>
+        <button onclick="agregar('Talla M',280)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="polera polo.jpg" alt="polera polo">
+        <h3>Talla L</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla L',50)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="polera polo.jpg" alt="polera polo">
+        <h3>Talla M</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla M',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="polera polo.jpg" alt="polera polo">
+        <h3>Talla L</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla L',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="camisa negra.jpg" alt="camisa negra">
+        <h3>Talla L</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla L',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ 
+ <div class="producto">
+        <img src="blusa roja.jpg" alt="blusa roja">
+        <h3>Talla M</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla M',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="conjunto elegante.jpg" alt="conjunto elegante">
+        <h3>Talla M</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla M',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="canguro negro.jpg" alt="canguro negro">
+        <h3>Talla L</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla L',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="polo blanco.jpg" alt="poloa blanco">
+        <h3>Talla M</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla M',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="bestido corto.jpg" alt="bestido corto">
+        <h3>Talla S</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Talla S',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ 
+
+</section>
+
+<section class="carrito">
+
+    <h2>🛍️ Mi carrito</h2>
+
+    <div id="lista">
+        Tu carrito está vacío.
+    </div>
+
+    <div class="total">
+        Total: <span id="total">0</span> Bs
+    </div>
+
+    <button id="comprar" onclick="enviarWhatsApp()">
+        📱 Realizar pedido por WhatsApp
+    </button>
+
+</section>
+
+<script>
+
+let carrito = [];
+
+function agregar(nombre, precio) {
+
+    let producto = carrito.find(p => p.nombre === nombre);
+
+    if(producto) {
+        producto.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+    }
+
+    mostrarCarrito();
+}
+
+function cambiarCantidad(index, cambio) {
+
+    carrito[index].cantidad += cambio;
+
+    if(carrito[index].cantidad <= 0) {
+        carrito.splice(index,1);
+    }
+
+    mostrarCarrito();
+}
+
+function eliminar(index) {
+    carrito.splice(index,1);
+    mostrarCarrito();
+}
+
+function mostrarCarrito() {
+
+    const lista = document.getElementById("lista");
+    const totalHTML = document.getElementById("total");
+
+    lista.innerHTML = "";
+
+    let total = 0;
+
+    if(carrito.length === 0) {
+        lista.innerHTML = "Tu carrito está vacío.";
+    }
+
+    carrito.forEach((producto,index) => {
+
+        let subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+
+        lista.innerHTML += `
+        <div class="item-carrito">
+
+            <div>
+                <strong>${producto.nombre}</strong><br>
+                ${producto.precio} Bs × ${producto.cantidad}
+                = ${subtotal} Bs
+            </div>
+
+            <div class="controles">
+
+                <button onclick="cambiarCantidad(${index},-1)">
+                    −
+                </button>
+
+                <button onclick="cambiarCantidad(${index},1)">
+                    +
+                </button>
+
+                <button onclick="eliminar(${index})">
+                    🗑️
+                </button>
+
+            </div>
+
+        </div>
+        `;
+    });
+
+    totalHTML.innerText = total;
+}
+
+function enviarWhatsApp() {
+
+    if(carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
+
+    let mensaje = "Hola, deseo realizar el siguiente pedido:%0A%0A";
+
+    let total = 0;
+
+    carrito.forEach(producto => {
+
+        let subtotal = producto.precio * producto.cantidad;
+
+        mensaje +=
+        "• " +
+        producto.nombre +
+        " x" +
+        producto.cantidad +
+        " = " +
+        subtotal +
+        " Bs%0A";
+
+        total += subtotal;
+    });
+
+    mensaje += "%0A*TOTAL: " + total + " Bs*";
+
+    /* CAMBIA ESTE NÚMERO POR TU WHATSAPP */
+    let numero = "59171332731";
+
+    window.open(
+        "https://wa.me/" + numero + "?text=" + mensaje,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
